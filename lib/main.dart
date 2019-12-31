@@ -4,19 +4,17 @@ void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   @override
-  var container = Container( // grey box
+  var container = Container(
+    // grey box
     child: Text(
       "Lorem ipsum",
-      style: TextStyle(
-        fontSize: 24,
-        fontWeight: FontWeight.w900,
-        fontFamily: "Georgia",
-      ),
+      style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24.0, fontFamily: 'Roboto'),
     ),
     width: 320,
     height: 240,
-    color: Colors.grey[300],
-    alignment: Alignment.bottomCenter,
+    decoration: BoxDecoration(
+      color: Colors.yellow[300],
+    ),
   );
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -24,7 +22,8 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           centerTitle: true,
-          title: Text('Welcome to Flutter',
+          title: Text(
+            'Welcome to Flutter',
             style: TextStyle(
               color: Colors.black,
             ),
